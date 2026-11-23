@@ -56,7 +56,7 @@ body{background:var(--page);font-family:"Figtree",system-ui,-apple-system,sans-s
 #qtext .w{display:inline-block;white-space:pre}
 #qtext b{color:var(--green);font-weight:800}
 #qtime{position:absolute;left:170px;top:236px;height:44px;padding:0 18px;border-radius:999px;background:var(--house);color:#fff;font-weight:700;font-size:20px;display:flex;align-items:center;gap:10px}
-#aleWrap{position:absolute;left:1180px;top:150px;width:620px;height:930px}
+#aleWrap{position:absolute;left:1380px;top:150px;width:540px;height:930px}
 
 /* ── FLOW STAGE ── */
 #flow{position:absolute;inset:0}
@@ -69,12 +69,12 @@ body{background:var(--page);font-family:"Figtree",system-ui,-apple-system,sans-s
 .rs i{display:block;width:16px;height:16px;margin:6px auto 12px;border-radius:50%;background:var(--cream);border:2px solid rgba(30,57,50,.3)}
 .rs.done{color:rgba(30,57,50,.7)} .rs.done i{background:var(--house);border-color:var(--house)}
 .rs.on{color:var(--green);font-weight:800} .rs.on i{background:var(--green);border-color:var(--green);box-shadow:0 0 0 7px rgba(0,98,65,.16);transform:scale(1.2)}
-#cap{position:absolute;left:140px;top:380px;width:560px}
+#cap{position:absolute;left:1262px;top:380px;width:560px}
 .cap{position:absolute;left:0;top:0;width:560px}
 .cap .n{font-size:22px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
 .cap .t{font-size:66px;font-weight:800;letter-spacing:-.025em;line-height:1.02;color:var(--house);margin-top:12px}
 .cap .s{font-size:28px;font-weight:500;line-height:1.3;color:rgba(30,57,50,.78);margin-top:18px}
-#barWrap{position:absolute;left:1262px;top:300px;width:620px;height:780px;transform-origin:50% 100%}
+#barWrap{position:absolute;left:0;top:360px;width:648px;height:720px;transform-origin:50% 100%}
 
 /* ── PHONE ── */
 #phone{position:absolute;left:747px;top:150px;width:425px;height:884px;border-radius:66px;background:#0b0b0b;box-shadow:0 0 0 2px #3a3a3a inset,0 40px 90px rgba(30,57,50,.35),0 10px 24px rgba(0,0,0,.25)}
@@ -114,7 +114,7 @@ body{background:var(--page);font-family:"Figtree",system-ui,-apple-system,sans-s
 /* closing */
 #closing{position:absolute;inset:0;background:var(--house);color:#fff}
 .cl{position:absolute;left:160px;font-size:104px;font-weight:800;letter-spacing:-.035em;line-height:1}
-#aleHappyWrap{position:absolute;left:1180px;top:160px;width:620px;height:930px}
+#aleHappyWrap{position:absolute;left:1203px;top:180px;width:717px;height:900px}
 #logoScene{position:absolute;inset:0;background:#fff;display:flex;align-items:center;justify-content:center}
 #logoScene img{width:300px;height:300px}
 </style>
@@ -128,7 +128,19 @@ body{background:var(--page);font-family:"Figtree",system-ui,-apple-system,sans-s
   <div id="qmark">“</div>
   <div id="qtime"><span class="sv" data-ic="clock" data-c="#fff"></span>8:00 a.m.</div>
   <div id="qtext"></div>
-  <div id="aleWrap"></div>
+  <div id="aleWrap">
+    <img src="assets/ale_pensive.png" style="position:absolute;left:0;top:0;width:540px;height:930px">
+    <svg id="aleFace" viewBox="104 0 280 482" style="position:absolute;left:0;top:0;width:540px;height:930px;overflow:visible">
+      <g id="aBrows" stroke="#271A0A" stroke-width="3.2" fill="none" stroke-linecap="round">
+        <path d="M137.5,111.5 Q145,107 154,105.5"/><path d="M174,104.5 Q187,102.5 201.5,108.5"/></g>
+      <g id="aEyeL"><ellipse cx="145" cy="127.5" rx="4.6" ry="5.8" fill="#212620"/><circle cx="146.8" cy="125.2" r="1.4" fill="#fff"/></g>
+      <g id="aEyeR"><ellipse cx="186.5" cy="126" rx="4.6" ry="5.8" fill="#212620"/><circle cx="188.3" cy="123.7" r="1.4" fill="#fff"/></g>
+      <path id="aMouth" d="M158.5,181.5 Q167,178.6 177.5,180.6" stroke="#B23610" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+      <g id="aThink">
+        <circle cx="300" cy="88" r="4" fill="#fff"/><circle cx="314" cy="70" r="6.5" fill="#fff"/>
+        <rect x="312" y="24" width="64" height="34" rx="17" fill="#fff"/>
+        <circle class="dot" cx="331" cy="41" r="3.6" fill="#1E3932"/><circle class="dot" cx="344" cy="41" r="3.6" fill="#1E3932"/><circle class="dot" cx="357" cy="41" r="3.6" fill="#1E3932"/></g>
+    </svg></div>
 </div>
 
 <!-- ═══ 2 · FLOW ═══ -->
@@ -140,7 +152,7 @@ body{background:var(--page);font-family:"Figtree",system-ui,-apple-system,sans-s
   </div>
   <div id="rail"><div id="railLine"></div><div id="railFill"></div></div>
   <div id="cap"></div>
-  <div id="barWrap"></div>
+  <div id="barWrap"><img src="assets/barista.png" style="width:648px;height:720px;display:block"></div>
 
   <div id="phone"><div id="screen">
     <div id="sbar"><span id="clock">7:52</span><span class="ic"><span class="sv" data-ic="signal"></span><span class="sv" data-ic="wifi"></span><span class="sv" data-ic="batt"></span></span></div>
@@ -281,10 +293,7 @@ body{background:var(--page);font-family:"Figtree",system-ui,-apple-system,sans-s
         <div class="L pill btnO row" style="left:20px;top:392px;width:353px;height:42px;gap:10px;font-weight:500"><span class="sv" data-ic="chat" data-c="#006241" data-s="18"></span>Evalúa tu compra</div>
         <div class="L" style="left:20px;top:470px;font-size:16px;font-weight:600">Datos del pedido</div>
         <div id="trRows" class="L" style="left:0;top:500px;width:393px"></div>
-        <div id="trReady" class="L" style="left:16px;top:690px;width:361px;height:120px;border-radius:16px;background:var(--house);color:#fff;padding:18px 20px;opacity:0">
-          <div style="font-size:13px;letter-spacing:.08em;font-weight:700;color:var(--gold)">TU PEDIDO TE ESPERA</div>
-          <div style="font-size:19px;font-weight:700;margin-top:6px">Búscalo en la barra de recojo</div>
-          <div style="font-size:14px;opacity:.8;margin-top:4px">Sin hacer cola · Starbucks Arequipa</div></div>
+        
       </div>
 
       <div id="dim"></div>
@@ -351,7 +360,7 @@ body{background:var(--page);font-family:"Figtree",system-ui,-apple-system,sans-s
   <div class="cl" id="cl1" style="top:330px">Pide antes.</div>
   <div class="cl" id="cl2" style="top:450px;color:var(--light)">Paga en la app.</div>
   <div class="cl" id="cl3" style="top:570px;color:var(--gold)">Recoge sin cola.</div>
-  <div id="aleHappyWrap"></div>
+  <div id="aleHappyWrap"><img src="assets/ale_happy.png" style="width:717px;height:900px;display:block"></div>
 </div>
 <!-- ═══ 4 · LOGO ═══ -->
 <div id="logoScene"><img id="logo" src="assets/siren.svg" alt="Starbucks"></div>
@@ -499,98 +508,12 @@ $('trRows').innerHTML=[['cup','Número de pedido','634047'],['starF','Estrellas 
 /* confetti */
 let cf='';const CC=['#CBA258','#006241','#D4E9E2','#E0A82E','#00754A'];for(let i=0;i<26;i++)cf+=`<div class="cfp L" style="left:0;top:0;width:${6+(i%3)*3}px;height:${10+(i%2)*6}px;border-radius:2px;background:${CC[i%5]}"></div>`;$('confetti').innerHTML=cf;
 
-/* ═════════════ characters ═════════════ */
-const SIREN=`<image href="${A.siren}" width="48" height="48"/>`;
-function alejandra(happy){
- const skin='#F1C3A1',skinS='#E3A884',hair='#16222D',sw='#E2682F',swS='#C9531F',bag='#F2E4C9';
- return `<svg viewBox="0 0 620 930" width="620" height="930" style="overflow:visible">
- <g id="aBody${happy?'H':'P'}">
-  <path d="M168 330C150 170 240 70 330 70c100 0 175 90 162 240-4 120 14 230-10 330H186C160 540 176 430 168 330z" fill="${hair}"/>
-  <path d="M92 930C96 700 150 560 315 540c165 20 222 160 226 390z" fill="${sw}"/>
-  <path d="M110 930c4-160 34-260 96-320-30 90-40 200-36 320z" fill="${swS}" opacity=".55"/>
-  <path d="M440 548c50 30 74 120 86 382h-62c-6-160-14-250-40-320z" fill="${swS}" opacity=".45"/>
-  <path d="M432 556c44 120 70 260 82 374" stroke="${bag}" stroke-width="40" fill="none"/>
-  <path d="M432 556c44 120 70 260 82 374" stroke="#E2D2B2" stroke-width="6" fill="none" transform="translate(-14 2)"/>
-  <rect x="276" y="420" width="78" height="120" rx="30" fill="${skinS}"/>
-  <path d="M262 528c18 30 88 30 106 0l18 22c-30 38-112 38-142 0z" fill="${swS}"/>
- </g>
- <g id="aHead${happy?'H':'P'}">
-  <ellipse cx="216" cy="318" rx="18" ry="26" fill="${skinS}"/>
-  <ellipse cx="315" cy="300" rx="104" ry="124" fill="${skin}"/>
-  <path d="M206 300c-6-120 70-178 150-168 70 10 108 74 104 150-30-44-70-80-126-92 10 26 6 48-6 64-28-40-74-58-122 46z" fill="${hair}"/>
-  <path d="M404 210c26 40 34 120 30 200 30-50 40-140 8-200z" fill="${hair}"/>
-  <circle cx="262" cy="350" r="20" fill="#F29C8A" opacity=".45"/><circle cx="378" cy="350" r="20" fill="#F29C8A" opacity=".45"/>
-  ${happy?`
-  <path d="M258 300q18-16 36 0M340 300q18-16 36 0" stroke="#2A1A12" stroke-width="7" fill="none" stroke-linecap="round"/>
-  <path d="M250 270q20-12 40-4M346 266q20-8 40 4" stroke="${hair}" stroke-width="7" fill="none" stroke-linecap="round"/>
-  <path d="M276 352q42 46 86 0q-4 34-43 38q-39-4-43-38z" fill="#8A2B22"/><path d="M286 356q34 12 66 0v8q-33 10-66 0z" fill="#fff"/>
-  <path d="M318 312q-10 18 2 22" stroke="${skinS}" stroke-width="5" fill="none" stroke-linecap="round"/>`:`
-  <g id="aEyes"><ellipse cx="276" cy="300" rx="8" ry="10" fill="#2A1A12"/><ellipse cx="358" cy="300" rx="8" ry="10" fill="#2A1A12"/>
-  <circle cx="279" cy="296" r="2.6" fill="#fff"/><circle cx="361" cy="296" r="2.6" fill="#fff"/></g>
-  <path d="M252 270q22-10 42-2M338 262q22-4 42 10" stroke="${hair}" stroke-width="7" fill="none" stroke-linecap="round"/>
-  <path d="M318 312q-10 18 2 22" stroke="${skinS}" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M300 368q16-6 36 2" stroke="#A44C3C" stroke-width="6" fill="none" stroke-linecap="round"/>`}
- </g>
- ${happy?`
- <g id="aArmH">
-  <path d="M150 760c10-90 50-150 100-170" stroke="${sw}" stroke-width="74" fill="none" stroke-linecap="round"/>
-  <g transform="translate(190 520) rotate(-6)">
-   <path d="M8 36h108l-12 150H20z" fill="#FBF8F2"/><rect x="0" y="16" width="124" height="26" rx="8" fill="#F1ECE2"/><rect x="14" y="0" width="96" height="20" rx="8" fill="#FBF8F2"/>
-   <g transform="translate(30 76) scale(1.3)">${SIREN}</g></g>
-  <ellipse cx="226" cy="640" rx="44" ry="34" fill="${skin}"/><path d="M196 620h60M196 640h62M200 660h52" stroke="${skinS}" stroke-width="4" stroke-linecap="round"/>
- </g>`:`
- <g id="aArmP">
-  <path d="M170 780c0-120 50-230 120-300" stroke="${sw}" stroke-width="78" fill="none" stroke-linecap="round"/>
-  <path d="M300 470c-8-30 0-58 14-74" stroke="${skin}" stroke-width="46" fill="none" stroke-linecap="round"/>
-  <ellipse cx="318" cy="392" rx="34" ry="26" fill="${skin}"/>
-  <path d="M300 386q20-14 40-2M302 404q18-8 36 0" stroke="${skinS}" stroke-width="4" fill="none" stroke-linecap="round"/>
- </g>
- <g id="aThink"><circle cx="470" cy="170" r="10" fill="#fff"/><circle cx="500" cy="130" r="15" fill="#fff"/>
-  <rect x="470" y="40" width="130" height="70" rx="35" fill="#fff"/><circle cx="510" cy="75" r="7" fill="#1E3932" class="dot"/><circle cx="535" cy="75" r="7" fill="#1E3932" class="dot"/><circle cx="560" cy="75" r="7" fill="#1E3932" class="dot"/></g>`}
- </svg>`}
-function barista(){
- const ink='#2A1A12',skin='#F4A483',skinS='#E08C6C';
- return `<svg viewBox="0 0 620 780" width="620" height="780" style="overflow:visible">
- <g id="bBody">
-  <path d="M150 780C150 600 196 500 300 486c104 14 150 114 150 294z" fill="#F6E9D7" stroke="${ink}" stroke-width="5"/>
-  <path d="M212 520c-10 90-8 180-2 260h186c6-80 8-170-2-260-30 30-150 30-182 0z" fill="#0C7A45" stroke="${ink}" stroke-width="5"/>
-  <path d="M212 520 250 470M394 520 356 470" stroke="#0C7A45" stroke-width="16"/>
-  <path d="M258 486l42 46 42-46 16 20-58 40-58-40z" fill="#fff" stroke="${ink}" stroke-width="4" stroke-linejoin="round"/>
-  <g transform="translate(276 600)">${SIREN}</g>
-  <rect x="272" y="436" width="60" height="64" rx="20" fill="${skinS}" stroke="${ink}" stroke-width="4"/>
-  <path d="M432 548c22 50 30 110 30 232" stroke="${ink}" stroke-width="56" fill="none" stroke-linecap="round"/>
-  <path d="M432 548c22 50 30 110 30 232" stroke="#F6E9D7" stroke-width="47" fill="none" stroke-linecap="round"/>
-  <path d="M458 650c4 40 4 90 4 130" stroke="${ink}" stroke-width="46" fill="none"/>
-  <path d="M458 650c4 40 4 90 4 130" stroke="${skin}" stroke-width="38" fill="none"/>
- </g>
- <g id="bArm">
-  <path d="M182 556C150 530 126 512 100 494" stroke="${ink}" stroke-width="70" fill="none" stroke-linecap="round"/>
-  <path d="M182 556C150 530 126 512 100 494" stroke="#F6E9D7" stroke-width="62" fill="none" stroke-linecap="round"/>
-  <path d="M104 494C84 480 66 470 48 462" stroke="${ink}" stroke-width="44" fill="none" stroke-linecap="round"/>
-  <path d="M104 494C84 480 66 470 48 462" stroke="${skin}" stroke-width="36" fill="none" stroke-linecap="round"/>
-  <g transform="translate(36 440)">
-   <ellipse cx="14" cy="22" rx="28" ry="23" fill="${skin}" stroke="${ink}" stroke-width="4"/>
-   <path d="M2 10H-40" stroke="${ink}" stroke-width="19" stroke-linecap="round"/><path d="M2 10H-40" stroke="${skin}" stroke-width="11" stroke-linecap="round"/>
-   <path d="M-2 26h26M0 37h22" stroke="${ink}" stroke-width="3.5" stroke-linecap="round"/></g>
- </g>
- <g id="bHead">
-  <ellipse cx="230" cy="330" rx="22" ry="30" fill="${skin}" stroke="${ink}" stroke-width="4"/><ellipse cx="376" cy="330" rx="22" ry="30" fill="${skin}" stroke="${ink}" stroke-width="4"/>
-  <path d="M230 300c0-90 30-140 72-140s74 50 74 140c0 90-34 144-74 144s-72-54-72-144z" fill="${skin}" stroke="${ink}" stroke-width="5"/>
-  <path d="M232 270c4-30 14-50 26-60l-2 70zM374 270c-4-30-14-50-26-60l2 70z" fill="#3A2318"/>
-  <g id="bEyes"><ellipse cx="276" cy="318" rx="7" ry="11" fill="${ink}"/><ellipse cx="330" cy="318" rx="7" ry="11" fill="${ink}"/></g>
-  <path d="M260 292q16-8 30-2M316 290q16-6 30 2" stroke="${ink}" stroke-width="5" fill="none" stroke-linecap="round"/>
-  <path d="M304 330q-14 26 0 32" stroke="${ink}" stroke-width="4" fill="none" stroke-linecap="round"/>
-  <path d="M266 380q38 34 76 0q-6 26-38 28q-32-2-38-28z" fill="#fff" stroke="${ink}" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M220 236c4-80 50-120 104-118 60 2 96 46 98 112z" fill="#D9B98C" stroke="${ink}" stroke-width="5"/>
-  <path d="M300 234c50-10 110-4 150 20-10 14-60 6-150 0z" fill="#C9A676" stroke="${ink}" stroke-width="5" stroke-linejoin="round"/>
-  <path d="M220 236q90-18 200-6" stroke="${ink}" stroke-width="5" fill="none"/>
-  <g transform="translate(296 150) scale(.8)">${SIREN}</g>
- </g></svg>`}
-$('aleWrap').innerHTML=alejandra(false);
-$('aleHappyWrap').innerHTML=alejandra(true);
-$('barWrap').innerHTML=barista();
+/* ═════════════ characters ═════════════
+   Construidos desde las referencias del usuario (tools/make_characters.py):
+   barista.png y ale_happy.png son las referencias sin fondo; ale_pensive.png es la
+   referencia recortada (sin café) y sin rasgos; la expresión pensativa se dibuja en
+   vector encima (#aleFace), en coordenadas del original (viewBox 104 0 280 482). */
 hydrateIcons();
-
 /* ═════════════ quote text ═════════════ */
 const QUOTE='Alejandra llega a la tienda 8:00am y solo quiere recoger su pedido y continuar su camino al trabajo, sin largas esperas. Ahora en el app Starbucks, tenemos una forma de ayudarla';
 const HL=['8:00am','sin','largas','esperas.','Starbucks,'];
@@ -745,7 +668,6 @@ function paintApp(s,t){
  css('trTitles',{transform:`translateY(${-(st-1)*34+ (st>1?(1-E.out(seg(t,s.stepAt,s.stepAt+.3)))*34:0)}px)`});
  const pw=[113,232,351][st-1],pwPrev=[0,113,232][st-1];
  css('trProg',{width:(st===1?kf(t,[[s.trackAt+.3,0],[s.trackAt+.8,113]],E.out):lerp(pwPrev,pw,E.io(seg(t,s.stepAt,s.stepAt+.6))))+'px',background:st===3?'var(--green)':'var(--house)'});
- const rd=st===3?E.back(seg(t,s.stepAt+.3,s.stepAt+.8)):0;css('trReady',{opacity:clamp(rd),transform:`translateY(${(1-rd)*30}px)`});
  css('trCups',{transform:`rotate(${st===3?Math.sin(seg(t,s.stepAt,s.stepAt+.8)*Math.PI*4)*8:0}deg)`});
 }
 
@@ -782,7 +704,10 @@ function render(t){
   const ap=E.out(seg(t,0.2,1.2));const aq=E.in(seg(t,7.9,8.8));
   css('aleWrap',{opacity:ap*(1-aq),transform:`translate(${(1-ap)*80+aq*120}px,${Math.sin(t*1.4)*4}px)`});
   document.querySelectorAll('#aleWrap .dot').forEach((d,i)=>d.style.opacity=.3+.7*Math.max(0,Math.sin(t*4-i*.8)));
-  const blink=(t%3.2)>3.05?.15:1;const eyes=document.querySelector('#aleWrap #aEyes');if(eyes){eyes.style.transformOrigin='317px 300px';eyes.style.transform=`scaleY(${blink}) translate(${Math.sin(t*.6)*3}px,${-3+Math.cos(t*.5)*2}px)`}
+  const blink=(t%3.2)>3.06?.12:1;
+  [['aEyeL','145px 127.5px'],['aEyeR','186.5px 126px']].forEach(([id,o])=>css(id,{transformOrigin:o,transform:`translate(${1.2+Math.sin(t*.6)*.8}px,${-1+Math.cos(t*.5)*.6}px) scaleY(${blink})`}));
+  css('aBrows',{transform:`translateY(${-Math.max(0,Math.sin(t*.9))*1.2}px)`});
+  css('aThink',{transformOrigin:'300px 88px',transform:`scale(${E.back(seg(t,1.0,1.5))})`});
   css('qb1',{transform:`scale(${kf(t,[[0,.85],[1.2,1]],E.out)})`});
  }
  /* FLOW */
@@ -809,10 +734,7 @@ function render(t){
    else css(el,{display:i===si?'block':'none',opacity:1,transform:'none'})});
   // barista
   const bIn=MODE==='video'?E.back(seg(t,10.0,10.8))*(1-E.in(seg(t,42.2,42.9))):1;
-  css('barWrap',{opacity:clamp(bIn*1.5),transform:`translateY(${(1-bIn)*420}px) rotate(${Math.sin(vt*1.3)*1.2}deg)`});
-  const arm=document.querySelector('#barWrap #bArm');if(arm){arm.style.transformOrigin='182px 556px';arm.style.transform=`rotate(${Math.sin(vt*2.2)*3}deg)`}
-  const bh=document.querySelector('#barWrap #bHead');if(bh){bh.style.transformOrigin='300px 440px';bh.style.transform=`rotate(${Math.sin(vt*1.1)*2-2}deg)`}
-  const be=document.querySelector('#barWrap #bEyes');if(be){be.style.transformOrigin='303px 318px';be.style.transform=`scaleY(${(vt%3.7)>3.55?.15:1})`}
+  css('barWrap',{opacity:clamp(bIn*1.5),transform:`translate(${Math.max(0,Math.sin(vt*2.4))*6}px,${(1-bIn)*560+Math.sin(vt*1.3)*3}px) rotate(${Math.sin(vt*1.1)*.8}deg)`});
   // barista hop on stage change
   if(MODE==='video'&&si>=0){const h=E.out(seg(t,STAGES[si][2],STAGES[si][2]+.18))-E.in(seg(t,STAGES[si][2]+.18,STAGES[si][2]+.4));$('barWrap').style.transform+=` translateY(${-h*14}px)`}
   paintFinger(t);
